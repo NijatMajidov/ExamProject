@@ -1,0 +1,17 @@
+﻿@model Portfolio
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form asp-action="DeletePortfolio" method="post" class="card" style="width: 18rem;">
+                <img src="~/uploads/portfolios/@Model.ImageUrl" class="card-img-top" alt="Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Portfolio</h5>
+                    <p class="card-text">Deqiq silmek isteyirsen?</p>
+                    <input asp-for="@Model.Id" hidden value="@Model.Id" />
+                    <a asp-action="index" asp-controller="portfolio" class="btn btn-warning">Go Back</a>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

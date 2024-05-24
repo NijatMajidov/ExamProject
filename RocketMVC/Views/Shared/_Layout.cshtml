@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<!--
+	Rocket Internet by TEMPLATE STOCK
+	templatestock.co templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html>
+<head>
+	<title>Rocket Internet by TEMPLATE STOCK</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+
+	<!-- Goggle Font -->
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+
+	<!-- Font Css -->
+	<link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+
+	<!-- Animation Css -->
+	<link rel="stylesheet" href="~/assets/css/animate.css">
+
+</head>
+<body>
+	<header>
+		<div id="homeFullScreen">
+			<div class="header-text">
+				<h1>Rocket internet</h1>
+				<div class="vertical-line"></div>
+				@if (User.Identity.IsAuthenticated)
+				{
+					<p>Welcome @User.Identity.Name</p>
+
+					<a asp-action="Logout" asp-controller="Account" class="btn btn-warning">LogOut</a>
+				}
+				else
+				{
+					<a asp-action="Login" asp-controller="Account" class="btn btn-warning">Login</a>
+					<a asp-action="Register" asp-controller="Account" class="btn btn-primary">Register</a>
+				}
+			</div><!-- End HeaderText -->
+		</div><!-- End homeFullScreen -->
+	</header><!-- End Header -->
+            @RenderBody()
+
+	<!-- Footer -->
+	<footer>
+		<ul class="in-line">
+			<li><a href="#"><span><i class="fa fa-facebook"></i></span></a></li>
+			<li><a href="#"><span><i class="fa fa-twitter"></i></span></a></li>
+			<li><a href="#"><span><i class="fa fa-youtube"></i></span></a></li>
+		</ul>
+		<span class="copyright">&#169; Untitled . All rights reserved. Design By <a href="http://templatestock.co">Templatestock.co</a></span>
+	</footer>
+
+
+
+
+	<!-- Main JS -->
+	<script type="text/javascript" src="~/assets/js/jquery-main.js"></script>
+
+	<!-- Bootstrap JS -->
+	<script type="text/javascript" src="~/assets/js/bootstrap.min.js"></script>
+
+	<!-- Animation JS -->
+	<script type="text/javascript" src="~/assets/js/wow.min.js"></script>
+
+	<!-- Custom JS -->
+	<script type="text/javascript" src="~/assets/js/custom.js"></script>
+
+
+</body>
+</html>

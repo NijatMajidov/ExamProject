@@ -1,0 +1,13 @@
+﻿@model Portfolio
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label asp-for="ImageFile">Add image</label>
+            <input asp-for="ImageFile" class="form-control" placeholder="Image">
+            <span asp-validation-for="ImageFile" style="color:red"></span>
+        </div>
+        <div asp-validation-summary="ModelOnly" style="color:red"></div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

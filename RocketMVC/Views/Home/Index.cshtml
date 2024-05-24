@@ -1,0 +1,66 @@
+﻿@model List<Portfolio>
+<section class="feature">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<div class="feature-box">
+					<h1>Lorem Ipsum</h1>
+					<p>Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+				</div>
+			</div><!-- End col-md-6 -->
+			<div class="col-md-6 col-sm-6 nopadding">
+				<img src="~/assets/images/1.png">
+			</div><!-- End col-md-6 -->
+
+			<div class="clearfix"></div><!-- End clearfix -->
+
+			<div class="col-md-6 col-sm-6 nopadding">
+				<img src="~/assets/images/1.png">
+			</div><!-- End col-md-6 -->
+			<div class="col-md-6 col-sm-6">
+				<div class="feature-box">
+					<h1>Lorem Ipsum</h1>
+					<p>Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 	the industry's standard dummy text ever since the 1500s,</p>
+				</div>
+			</div><!-- End col-md-6 -->
+		</div>
+	</div>
+</section>
+
+<!-- portfolio -->
+
+<section class="portfolio">
+	<div class="container">
+		<div class="row gap-3">
+			<div class="col-md-12">
+				<h1 class="heading">Portfolio</h1>
+			</div><!-- End col-md-12 -->
+
+			@foreach(var item in Model)
+			{
+
+                <div class="col-md-4 col-sm-4" style="margin-bottom: 20px">
+                        <img src="~/uploads/portfolios/@item.ImageUrl">
+                    </div>
+					
+			}
+		</div><!-- End row -->
+	</div><!-- End container -->
+</section>
+
+<!-- Call to Action -->
+<section class="call-top-action text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>many variations of passages</h1>
+				<p>
+					There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+					<br />
+					in some form, by injected humour, or randomised words which don't look even slightly believable
+				</p>
+				<span>LOREM IPSUM</span>
+			</div><!-- End col-md-12 -->
+		</div><!-- End row -->
+	</div><!-- End container -->
+</section>
